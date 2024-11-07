@@ -1,0 +1,38 @@
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    article {
+        padding: 0.5rem;
+    }
+
+    footer {
+        position: static;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0.25rem 0;
+    }
+
+    article {
+        padding: 0.25rem;
+    }
+
+    footer {
+        padding: 0.25rem 0;
+    }
+}
