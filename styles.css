@@ -2,11 +2,11 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #99582a;
 }
 
 header {
-    background-color: #6b3900;
+    background-color: #432818; 
     color: #fff;
     padding: 2rem;
     text-align: center;
@@ -14,28 +14,45 @@ header {
 
 header h1 {
     margin: 0;
+    color: #fff;
 }
 
 section {
     padding: 2rem;
     margin: 1rem 0;
-    background-color: #fff;
+    background-color: #bb9457;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.about, .hobby, .skills, .projects, .resume {
+.title-page {
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+    margin-bottom: 0.3rem;
+}
+
+.title-message p {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.about, .hobby, .skills, .projects, .resume, .tools {
     text-align: center;
+    
 }
 
-.about h2, .hobby h2, .skills h2, .projects h2, .resume h2 {
+.about h2, .hobby h2, .skills h2, .projects h1, .resume h2, .tools h2{
     margin-bottom: 2rem;
+    color: #fff;
 }
 
-.about-container, .hobby-container, .skills-container, .resume-container {
+.about-container, .hobby-container, .skills-container, .resume-container, .tools-container, .project-container {
     display: flex;
     justify-content: space-between;
-    background-color: #d3b8ae;
+    background-color: #ffe6a7;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -46,39 +63,46 @@ section {
 }
 
 .about-left img, .hobby-left img, .resume-left img {
-    width: 100%;
-    border-radius: 10px;
+    max-width: 350px;
+    max-height: 350;
+    width: auto;
+    height: auto;
 }
 
-.skills-container {
+.skills-container, .tools-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
-.skill {
+.skill{
     width: 30%;
     margin: 1%;
     padding: 1rem;
-    background-color: #d3b8ae;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 6rem;
+    margin-right: 6rem;
 }
 
-.skill h3 {
-    margin-bottom: 0.5rem;
-}
-
-.skill .progress-bar {
-    background-color: #6b3900;
-    height: 1rem;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
-}
-
-.skill .progress-bar div {
-    height: 100%;
+.tool {
+    width: 25%;
+    margin: 1%;
+    padding: 1rem;
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 11rem;
+    margin-right: 11rem;
+}
+
+
+.skill h3, .tool h3 {
+    margin-bottom: 0.5rem;
 }
 
 .projects .project-container {
@@ -112,7 +136,7 @@ section {
 .projects .project a:hover {
     text-decoration: underline;
 }
-
+ 
 footer {
     background-color: #6b3900;
     color: #fff;
