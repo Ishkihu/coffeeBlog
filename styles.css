@@ -24,15 +24,15 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.about {
+.about, .hobby, .skills, .projects, .resume {
     text-align: center;
 }
 
-.about h2 {
+.about h2, .hobby h2, .skills h2, .projects h2, .resume h2 {
     margin-bottom: 2rem;
 }
 
-.about-container {
+.about-container, .hobby-container, .skills-container, .resume-container {
     display: flex;
     justify-content: space-between;
     background-color: #d3b8ae;
@@ -41,21 +41,44 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-left, .about-right {
+.about-left, .about-right, .hobby-left, .hobby-right, .resume-left, .resume-right {
     width: 48%;
 }
 
-.about-left img {
+.about-left img, .hobby-left img, .resume-left img {
     width: 100%;
     border-radius: 10px;
 }
 
-.projects {
-    text-align: center;
+.skills-container {
+    display: flex;
+    justify-content: space-between;
 }
 
-.projects h2 {
-    margin-bottom: 2rem;
+.skill {
+    width: 30%;
+    margin: 1%;
+    padding: 1rem;
+    background-color: #d3b8ae;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+    margin-bottom: 0.5rem;
+}
+
+.skill .progress-bar {
+    background-color: #6b3900;
+    height: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.skill .progress-bar div {
+    height: 100%;
+    background-color: #fff;
 }
 
 .projects .project-container {
@@ -78,26 +101,16 @@ section {
     margin-top: 1rem;
 }
 
-.resume {
-    text-align: center;
+.projects .project a {
+    display: block;
+    margin-top: 1rem;
+    color: #6b3900;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.resume-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #d3b8ae;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.resume-left, .resume-right {
-    width: 48%;
-}
-
-.resume-left img {
-    width: 100%;
-    border-radius: 10px;
+.projects .project a:hover {
+    text-decoration: underline;
 }
 
 footer {
