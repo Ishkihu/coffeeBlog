@@ -1,38 +1,34 @@
 /* Media Queries */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 0.5rem 0;
+    .about-container, .resume-container {
+        flex-direction: column;
     }
 
-    main {
-        padding: 0.5rem;
+    .about-left, .about-right, .resume-left, .resume-right {
+        width: 100%;
     }
 
-    article {
-        padding: 0.5rem;
+    .projects .project-container {
+        flex-direction: column;
     }
 
-    footer {
-        position: static;
-        padding: 0.5rem 0;
+    .projects .project {
+        width: 100%;
+        margin: 1rem 0;
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
+    header {
+        padding: 1rem;
     }
 
-    nav ul li {
-        margin: 0.25rem 0;
+    section {
+        padding: 1rem;
     }
 
-    article {
-        padding: 0.25rem;
-    }
-
-    footer {
-        padding: 0.25rem 0;
+    .projects .project {
+        width: 100%;
+        margin: 0.5rem 0;
     }
 }
