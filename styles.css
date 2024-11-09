@@ -25,18 +25,52 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.title-page {
-    display: flex;
-    font-size: 4rem;
-    justify-content: center;
-    margin-bottom: 0.3rem;
+.section-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.title-message p {
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.big-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: url('Assets/pic32.png') no-repeat center center/cover;
+    height: 900px;
     display: flex;
-    font-size: 1.5rem;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 0.5rem;
+    align-items: center;
+
+}
+
+.big-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.title-page {
+    font-size: 3.9rem; 
+    font-family: 'garamond', serif;
+    color: #FFFDD0;
+}
+
+.title-message {
+    font-size: 1.5rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-family: 'garamond', serif;
 }
 
 .about, .hobby, .skills, .projects, .resume, .tools {
@@ -47,6 +81,7 @@ section {
 .about h2, .hobby h2, .skills h2, .projects h1, .resume h2, .tools h2{
     margin-bottom: 2rem;
     color: #fff;
+    font-size: 2rem;
 }
 
 .about-container, .hobby-container, .skills-container, .resume-container, .tools-container, .project-container {
@@ -58,15 +93,155 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-left, .about-right, .hobby-left, .hobby-right, .resume-left, .resume-right {
+.about-right, .hobby-left, .hobby-right, .resume-left, .resume-right {
     width: 48%;
 }
 
-.about-left img, .hobby-left img, .resume-left img {
-    max-width: 350px;
-    max-height: 350;
-    width: auto;
-    height: auto;
+.about-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%; 
+}
+
+.about-left img {
+    width: 300px;
+    height: 300px; 
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.about-left{
+    width: 30%;
+    margin: 1%;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.about .about-right{
+    width: 80%;
+    margin: 1%;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.about-right h5 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-intro, .about-body, .about-connect {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-intro {
+    font-weight: bold;
+    color: #bb9457;
+}
+
+.about-body {
+    font-style: italic;
+}
+
+.about-connect {
+    font-weight: bold;
+    color: #8c6d31;
+}
+
+.cv-download {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #bb9457;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cv-download:hover {
+    background-color: #a67c52;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.about-left .social-icon {
+    width: 40px; 
+    height: 40px;
+}
+
+.hobby-container, .skills-container, .tools-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #ffe6a7;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-item, .skill, .tool {
+    text-align: center;
+    width: 30%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: linear-gradient(to bottom, #FFFDD0 0%, #D4B483 100%); /* Cream color gradient */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-item:hover, .skill:hover, .tool:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-icon, .skill img, .tool img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-item h3, .skill h3, .tool h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-item p, .skill p, .tool p {
+    font-size: 1rem;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.skills-container, .tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .skills-container, .tools-container {
@@ -87,6 +262,7 @@ section {
     margin-left: 6rem;
     margin-right: 6rem;
 }
+
 
 .tool {
     width: 25%;
@@ -114,7 +290,7 @@ section {
     width: 30%;
     margin: 1%;
     padding: 1rem;
-    background-color: #d3b8ae;
+    background-color: #eee9e7;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
