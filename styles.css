@@ -46,7 +46,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .big-header::before {
@@ -75,10 +74,9 @@ section {
 
 .about, .hobby, .skills, .projects, .resume, .tools {
     text-align: center;
-    
 }
 
-.about h2, .hobby h2, .skills h2, .projects h1, .resume h2, .tools h2{
+.about h2, .hobby h2, .skills h2, .projects h1, .resume h2, .tools h2 {
     margin-bottom: 2rem;
     color: #fff;
     font-size: 2rem;
@@ -112,7 +110,7 @@ section {
     object-fit: cover;
 }
 
-.about-left{
+.about-left {
     width: 30%;
     margin: 1%;
     padding: 1rem;
@@ -124,7 +122,7 @@ section {
     margin-right: 8rem;
 }
 
-.about .about-right{
+.about .about-right {
     width: 80%;
     margin: 1%;
     padding: 1rem;
@@ -242,16 +240,10 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.skills-container, .tools-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     position: relative;
 }
 
-.skill{
+.skill, .tool {
     width: 30%;
     margin: 1%;
     padding: 1rem;
@@ -261,24 +253,6 @@ section {
     text-align: center;
     margin-left: 6rem;
     margin-right: 6rem;
-}
-
-
-.tool {
-    width: 25%;
-    margin: 1%;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-left: 11rem;
-    margin-right: 11rem;
-}
-
-
-.skill h3, .tool h3 {
-    margin-bottom: 0.5rem;
 }
 
 .projects .project-container {
@@ -312,7 +286,7 @@ section {
 .projects .project a:hover {
     text-decoration: underline;
 }
- 
+
 footer {
     background-color: #6b3900;
     color: #fff;
